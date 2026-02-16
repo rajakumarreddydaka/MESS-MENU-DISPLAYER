@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIT AP MESS MENU</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu-board">
+        <div class="food-decor decor-left">
+            <img src="image.png" alt="Breakfast Dish">
+        </div>
+        <div class="food-decor decor-right">
+            <img src="image2.png" alt="Dinner Dish">
+        </div> 
+         <div class="food-decor decor-top-right">
+            <img src="image3.png" alt="Dinner Dish">
+        </div> 
+        <div class="content-wrapper">
+            <header>
+                <h1 class="main-title">VIT AP MENS HOSTEL <span>MESS MENU</span></h1>
+                <div class="gold-divider"></div>
+            </header>
+
+            <div class="row">
+                <button id="tm" class="btn-gold">Today's Menu</button>
+                <button id="tom" class="btn-gold">Tomorrow's Menu</button>
+                <button id="wm" class="btn-gold">Weekly Menu</button>
+            </div>
+
+            <div class="row">
+                <div class="date-box">
+                    <label>SELECT DATE</label>
+                    <input type="date" id="date">
+                </div>
+            </div>
+
+            <div class="row">
+                <button id="bf" class="btn-outline">BREAKFAST</button>
+                <button id="an" class="btn-outline">LUNCH</button>
+                <button id="eve" class="btn-outline">SNACKS</button>
+                <button id="ngt" class="btn-outline">DINNER</button>
+            </div>
+
+            <div id="output">
+                <p class="placeholder">Select a meal to view today's selection...</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

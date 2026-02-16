@@ -1,0 +1,215 @@
+
+body {
+    background-color: #0d0d0d;
+    background-image: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+                      url('https://www.transparenttextures.com/patterns/dark-wood.png');
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* ============================= */
+/* MAIN CONTAINER */
+/* ============================= */
+
+.menu-board {
+    position: relative;
+    width: 100%;
+    max-width: 950px;
+    background: rgba(20, 20, 20, 0.95);
+    border: 1px solid #333;
+    padding: 50px 20px;
+    box-shadow: 0 0 40px rgba(0,0,0,1);
+    text-align: center;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+/* Keep content above decorative images */
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+}
+
+/* ============================= */
+/* HEADER */
+/* ============================= */
+
+.main-title {
+    font-size: clamp(1.6rem, 5vw, 3rem);
+    letter-spacing: 2px;
+    margin: 10px 0;
+}
+
+.main-title span {
+    color: #d4af37;
+}
+
+.gold-divider {
+    width: 100px;
+    height: 3px;
+    background: #d4af37;
+    margin: 15px auto 30px;
+    border-radius: 5px;
+}
+
+/* ============================= */
+/* ROW LAYOUT */
+/* ============================= */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+/* ============================= */
+/* BUTTONS */
+/* ============================= */
+
+button {
+    padding: 12px 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.btn-gold {
+    background: #d4af37;
+    color: #000;
+}
+
+.btn-gold:hover {
+    background: #ffffff;
+    transform: scale(1.05);
+}
+
+.btn-outline {
+    background: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    min-width: 130px;
+}
+
+.btn-outline:hover {
+    background: #d4af37;
+    color: #000;
+    transform: scale(1.05);
+}
+
+/* ============================= */
+/* DATE INPUT */
+/* ============================= */
+
+#date {
+    border: 1px solid #d4af37;
+    padding: 10px;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+}
+
+#output {
+    margin-top: 30px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+    color: #000;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================= */
+/* DECORATIVE IMAGES */
+/* ============================= */
+
+.food-decor {
+    position: absolute;
+    z-index: 1;
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+.food-decor img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid #d4af37;
+    object-fit: cover;
+}
+
+/* LEFT IMAGE */
+.decor-left {
+    width: 220px;
+    left: -60px;
+    top: -20px;
+    transform: rotate(-15deg);
+}
+
+.decor-right {
+    width: 220px;
+    right: -60px;
+    bottom: -20px;
+    transform: rotate(15deg);
+}
+
+.decor-top-right {
+    width: 285px;
+    right: -40px;
+    top: -40px;
+    transform: rotate(10deg);
+}
+
+@media (max-width: 600px) {
+
+    .menu-board {
+        padding: 30px 10px;
+    }
+
+    .main-title {
+        font-size: 1.6rem;
+    }
+
+    /* Smaller decorative images */
+    .decor-left {
+        width: 100px;
+        left: -20px;
+        top: -10px;
+    }
+
+    .decor-right {
+        width: 100px;
+        right: -20px;
+        bottom: -10px;
+    }
+
+    .decor-top-right {
+        width: 150px;
+        right: -15px;
+        top: -15px;
+    }
+
+    /* 2 buttons per row */
+    button {
+        flex: 0 0 calc(48% - 5px);
+        font-size: 0.75rem;
+        padding: 10px 5px;
+    }
+
+    #output {
+        padding: 15px;
+    }
+}
